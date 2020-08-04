@@ -1,5 +1,7 @@
 html {
     background-color: #f2f2f2;
+    font-size: sans-serif;
+    color: #333;
 }
 
 body {
@@ -86,7 +88,7 @@ body {
 
     &Box {
         font-size: 1rem;
-        margin-top: 8px;
+        margin-top: 16px;
         color: #BDBDBD;
     }
 }
@@ -96,9 +98,9 @@ body {
     flex-flow: row wrap;
     align-content: space-between;
     justify-content: space-between;
-    width: 72%;
+    width: 64%;
     @include mq() {
-        width: 88%;
+        width: 80%;
     }
     margin: 80px auto 64px;
 
