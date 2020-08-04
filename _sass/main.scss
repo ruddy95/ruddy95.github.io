@@ -1,0 +1,130 @@
+html {
+    background-color: #f2f2f2;
+}
+
+body {
+    font-size: .7rem;
+    transition-duration: 500ms;
+    transition-timing-function:ease-in;
+}
+
+.titleAside {
+    position: fixed;
+    top: 50%;
+    right: -96px;
+    transform: rotate( -90deg );
+    font-size: .8rem;
+    letter-spacing: .5rem;
+}
+
+.about {
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    letter-spacing: .2rem;
+    font-size: .6rem;
+    color: #666;
+
+    &Box {
+        display: none;
+
+        &__inner {
+            margin: 96px auto 0;
+            height: 320px;
+            width: 56%;
+            color: #555;
+            font-size: .8rem;
+            line-height: 1.6;
+            letter-spacing: .1rem;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-between;
+            @include mq() {
+                height: 144px;
+                width: 72%;
+                flex-flow: column wrap;
+            }
+        }
+
+        &__name {
+            margin: 16px auto 8px;
+            font-size: 1rem;
+            letter-spacing: .5rem;
+            text-align: center;
+            width: 100%;
+            @include mq() {
+                width: 32%;
+            }
+        }
+
+        &__class {
+            width: 100%;
+            text-align: center;
+            font-size: .6rem;
+            margin: 0 auto;
+            @include mq() {
+                width: 32%;
+            }
+        }
+
+        &__caption {
+            width: 100%;
+            margin: 16px auto;
+            @include mq() {
+                margin: 0;
+                width: 64%;
+            }
+        }
+    }
+}
+
+.social {
+    position: fixed;
+    bottom: 24px;
+    left: 16px;
+
+    &Box {
+        font-size: 1rem;
+        margin-top: 8px;
+        color: #BDBDBD;
+    }
+}
+
+.works {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 72%;
+    @include mq() {
+        width: 88%;
+    }
+    margin: 80px auto 64px;
+
+    &Item {
+        width: 100%;
+        @include mq() {
+            width: 30%;
+        }
+        position: relative;
+        margin-bottom: 32px;
+
+        &__image {
+            width: 100%;
+        }
+        &__caption {
+            margin-top: 4px;
+            text-align: center;
+            letter-spacing: .1rem;
+            color: #A1A1A1;
+        }
+        &__year {
+            color: #BDBDBD;
+            position: absolute;
+            top: 50%;
+            left: -24px;
+            transform: rotate( -90deg );
+        }
+    }
+}

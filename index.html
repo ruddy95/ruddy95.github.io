@@ -1,0 +1,57 @@
+---
+title: Home
+layout: default
+---
+
+<div id="js-about" class="about">
+    ABOUT
+</div>
+<div id="js-aboutBox" class="aboutBox">
+    <div class="aboutBox__inner">
+        <p class="aboutBox__name">
+            RYUSUKE KUMITA
+        </p>
+        <p class="aboutBox__class">
+            Graphic Designer + Web Engineer + Investor
+        </p>
+        <p class="aboutBox__caption">
+            97年生。グラフィックデザイナーとしてコンセプトから立ち上げ、3DCG・アニメーション・空間など多様な媒体での表現を行っている。またベンチャー企業で創業からCTOを務め、現在はフリーランスとしてフロントエンドからインフラまで包括的に請け負っている。また個人投資を行っており、投資先では技術全般の顧問を務める。東京大学工学部在籍。
+        </p>
+    </div>
+</div>
+<h1 class="titleAside">
+    <a href="/">
+        RYUSUKE KUMITA
+    </a>
+</h1>
+<div class="social">
+    {% for s in site.data.social %}
+    <div class="socialBox">
+        <a href="{{ s.url }}" target="_blank">
+            <i class="{{ s.fa }}"></i>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="works">
+    {% for w in site.data.works %}
+        <div class="worksItem">
+            <div class="worksItem__inner">
+                {% if w.link %}
+                <a href="{{ w.link }}" target="_blank">
+                    <img class="worksItem__image" src="{{ w.src }}">
+                </a>
+                {% else %}
+                <img class="worksItem__image" src="{{ w.src }}">
+                {% endif %}
+                <p class="worksItem__caption">
+                    {{ w.cap }}
+                </p>
+            </div>
+            <div class="worksItem__year">
+                {{ w.year }}
+            </div>
+        </div>
+    {% endfor %}
+</div>

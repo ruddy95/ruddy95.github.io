@@ -1,0 +1,8 @@
+lang: ja
+timezone: Asia/Tokyo
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+    - vendor/
